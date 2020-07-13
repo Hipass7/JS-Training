@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li class='active'>CSS</li>
+        <li class='active'>JavaScript</li>
+    </ul>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+    <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+    <script>
+        var ol = document.getElementsByTagName('ol')[0];
+        // var lis = document.getElementsByTagName('li');
+        var lis = ol.getElementsByTagName('li');
+        for(var i=0; i < lis.length; i++){
+            lis[i].style.color='red';
+        }
+    </script>
+</body>
+</html>

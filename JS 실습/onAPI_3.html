@@ -1,0 +1,17 @@
+<input type="text" id="target"></textarea>
+<input id="remove"  type="button" value="remove" />
+<p id="status"></p>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+  var handler = function(e){
+    $('#status').html(e.type+Math.random());
+  };
+  $('#target').on('focus blur', handler)
+  $('#remove').on('click' , function(e){
+    $('#target').off('focus blur', handler);
+    console.log(32);
+  }).on('dblclick',function(e){
+      $('#target').on('focus blur',handler);
+      console.log(22);
+  })
+</script>
